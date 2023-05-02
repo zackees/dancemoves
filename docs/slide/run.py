@@ -11,5 +11,10 @@ for f in files:
     print(f)
 
 for i, f in enumerate(files):
+    # split file name without extension
+    name = f.split('.')[0]
+    # cast to a number
+    name = int(name)
+    # write out file with leading zeros
     # rename file
-    os.rename(f, f'{i}.jpg')
+    os.rename(f, f'{name:03d}.jpg')
