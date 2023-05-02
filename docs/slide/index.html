@@ -218,4 +218,23 @@
     <img src="209.jpg" alt="209.jpg">
     <img src="210.jpg" alt="210.jpg">
 </body>
+
+<script>
+
+function shrinkImages() {
+  const images = document.getElementsByTagName('img');
+  const scaleFactor = 1 / 4;
+
+  for (let i = 0; i < images.length; i++) {
+    const img = images[i];
+    const originalWidth = 1080;
+    const originalHeight = 1920;
+    img.style.width = (originalWidth * scaleFactor) + 'px';
+    img.style.height = (originalHeight * scaleFactor) + 'px';
+  }
+}
+
+window.onload = shrinkImages;
+
+</script>
 </html>
